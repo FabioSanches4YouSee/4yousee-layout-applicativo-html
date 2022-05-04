@@ -1,0 +1,34 @@
+body.template-B {
+  background-color: #000;
+  overflow: hidden;
+}
+
+body.template-B  .vivo-navbar {
+  background-color: #F29200 !important;
+}
+
+body.template-B .vivo-navbar .phone-title, body.template-B .vivo-navbar .phone-title:hover {
+  background-color: #FFA827 !important;
+}
+
+body.template-B .accessory-title {
+  background-color: #FFA827;
+}
+
+body.template-B ul.nav-pills > li.active > a {
+  background-color: #f29200 !important;
+}
+
+body.template-B .vivo-tabela-plano td {
+  background-color: #000;
+  color: #fff;
+}
+
+body.template-B .vivo-texto-oferta {
+  width: 100%;
+}
+@media (orientation:portrait) {
+  body.template-B .vivo-texto-oferta {
+    display: none;
+  }
+}

@@ -1,0 +1,126 @@
+<html >
+<head>
+    <style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Precificador Digital</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+
+    <link rel="apple-touch-icon" href="https://tim.precificador.com/preview/assets/logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://tim.precificador.com/preview/assets/152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tim.precificador.com/preview/assets/180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://tim.precificador.com/preview/assets/167.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+
+<body ng-app="precificadorApp-v2" ng-controller="GlobalCtrl" ng-class="template" class="ng-scope vsc-initialized template-D" style="">
+    <div ui-view="" class="main ng-scope" style="">
+        <div class="top-bar ng-scope" on-long-press="main.askAdminPassword()" ng-dblclick="main.askAdminPassword()">
+            <img class="logo" src="https://tim.precificador.com/img/tim/logo-white.png">
+            <div class="vivo-titulo">
+
+                <a ng-if="main.showingWearable" class="phone-title title ng-scope active" ui-sref=".phone({_id:main.phone._id})" ui-sref-active="active" href="#/phone/">
+                    <span class="ng-binding">MOTOZ2</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="content ng-scope">
+            <ui-view class="ng-scope">
+                <div class="container-fluid ng-scope" ng-click="phone.userClick = true; phone.toggleVideo(); phone.changeColor()">
+                    <div>
+                        <div type="pills" ng-if="!phone.playerDisable" ng-class="{compressed: phone.hasWearable || phone.player.tag}" active="phone.activeTab" class="ng-scope ng-isolate-scope compressed">
+
+                            <ul class="nav nav-pills" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}" ng-transclude="">
+                                <li  ng-class="[{active: active, disabled: disabled}, classes]" class="title vivo-tab-button uib-tab nav-item ng-scope ng-isolate-scope active" heading="Ofertas" ng-click="phone.timeoutAutoMode('plan'); phone.hideWearable()" style="">
+                                    <a href="index.html" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Ofertas</a>
+                                </li>
+                                <li  ng-class="[{active: active, disabled: disabled}, classes]" class="title vivo-tab-button uib-tab nav-item ng-scope ng-isolate-scope" heading="Detalhes" ng-click="phone.timeoutAutoMode('phone', phone.player.idproduto); phone.hideWearable();">
+                                    <a href="index2.html" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Detalhes</a>
+                                </li>
+                                <li  ng-class="[{active: active, disabled: disabled}, classes]" class="title vivo-tab-button uib-tab nav-item ng-scope ng-isolate-scope" ng-if="phone.hasWearable" heading="Acessório" ng-click="phone.timeoutAutoMode('wearable', phone.player.acessorios[0].idproduto); phone.showWearable()" style="">
+                                    <a href="index3.html" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Acessórios</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane ng-scope active" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab" style="">
+
+                                    <div uib-carousel="uib-carousel" class="vivo-plan ng-scope ng-isolate-scope carousel compressed" interval="phone.myInterval" active="phone.activePlan" no-pause="true" ng-swipe-left="phone.nextPlan()" ng-swipe-right="phone.previousPlan()" ng-class="{compressed: phone.player.tag}">
+                                        <div class="carousel-inner" ng-transclude="">
+                                            <div uib-slide="" ng-repeat="plan in phone.player.ofertas track by $index" index="$index" class="ng-scope ng-isolate-scope item active">
+                                                <div class="text-center" ng-transclude="">
+                                                    <div ng-if="plan.idtipo_plano != phone.OFERTA_SEM_PLANO" class="jumbotron panel-body table_container ng-scope">
+                                                        <h3 class="title vivo-titulo-plano vivo-titulo-plano ng-binding">
+                                                            Plano Demo pos
+                                                        </h3>
+                                                        <table class="table vivo-tabela-plano">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td ng-if="plan.tipo_plano == 'Pós' || plan.tipo_plano == 'pos'" class="ng-binding ng-scope">Pós Pago</td>
+                                                                    <td ng-if="plan.preco_no_plano" class="title ng-binding ng-scope">$3.000,00</td>
+                                                                </tr>
+                                                                <tr ng-show="plan.preco_no_plano > 0 &amp;&amp; plan.numero_parcelas" class="">
+                                                                    <td><strong class="ng-binding">1x sem juros no cartão de crédito</strong></td>
+                                                                    <td class="ng-binding">$3.000,00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="ng-binding">Taxa mensal total do plano</td>
+                                                                    <td class="ng-binding">$0,00</td>
+                                                                </tr>
+                                                                <tr ng-show="phone.planosPrePago" class="ng-hide">
+                                                                    <td class="ng-binding">Pré Pago* - À Vista</td>
+                                                                    <td class="ng-binding"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p class="legal">
+                                                            <span ng-bind-html="phone.player.textolegal | html" class="ng-binding">Oferta sujeita à permanência de 12 meses e condições de permanência do plano anual vinculado. Oferta sujeita a análise de crédito, consulte  o regulamento e as condições comerciais. Parcelamento em até 12 vezes, sem juros, válido para pagamento com cartão de crédito. Chip (R$ 12,00) não incluso no valor do aparelho. Para mais informações, consulte o consultor.</span>
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a role="button" href="" class="left carousel-control ng-hide" ng-click="prev()" ng-class="{ disabled: isPrevDisabled() }" ng-show="slides.length > 1">
+                                            <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+                                            <span class="sr-only">previous</span>
+                                        </a>
+                                        <a role="button" href="" class="right carousel-control ng-hide" ng-click="next()" ng-class="{ disabled: isNextDisabled() }" ng-show="slides.length > 1">
+                                            <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+                                            <span class="sr-only">next</span>
+                                        </a>
+                                        <ol class="carousel-indicators ng-hide" ng-show="slides.length > 1">
+                                            <li ng-repeat="slide in slides | orderBy:indexOfSlide track by $index" ng-class="{ active: isActive(slide) }" ng-click="select(slide)" class="ng-scope active">
+                                                <span class="sr-only ng-binding">slide 1 of 1<span ng-if="isActive(slide)" class="ng-scope">, currently active</span></span>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <img id="tag" class="vivo-tag img-responsive ng-scope"  src="img/tim/banner1.jpg">
+                </div>
+                <div class="video-wallpaper ng-scope" ng-click="phone.toggleVideo()">
+                    <div class="vsc-controller vsc-nosource"></div>
+                    <video class="video-banner" fullscren="" playsinline="" preload="none" autoplay="" muted="" id="videoWallPaper">
+                        Your browser does not support the video tag.
+
+                    </video>
+                </div>
+            </ui-view>
+        </div>
+    </div>
+</body>
+</html>
+

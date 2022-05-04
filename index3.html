@@ -1,0 +1,115 @@
+<html >
+<head>
+    <style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Precificador Digital</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+
+<body ng-app="precificadorApp-v2" ng-controller="GlobalCtrl" ng-class="template" class="ng-scope vsc-initialized template-D" style="">
+    <div ui-view="" class="main ng-scope" style="">
+        <div class="top-bar ng-scope" on-long-press="main.askAdminPassword()" ng-dblclick="main.askAdminPassword()">
+            <img class="logo" src="img/tim/logo-white.png">
+            <div class="vivo-titulo">
+
+                <a ng-if="main.showingWearable" class="phone-title title ng-scope active" ui-sref=".phone({_id:main.phone._id})" ui-sref-active="active" href="#/phone/">
+                    <span class="ng-binding">MOTOZ2</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="content ng-scope">
+            <ui-view class="ng-scope">
+                <div class="container-fluid ng-scope" ng-click="phone.userClick = true; phone.toggleVideo(); phone.changeColor()">
+                    <div>
+                        <div type="pills" ng-if="!phone.playerDisable" ng-class="{compressed: phone.hasWearable || phone.player.tag}" active="phone.activeTab" class="ng-scope ng-isolate-scope compressed">
+
+                            <ul class="nav nav-pills" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}" ng-transclude="">
+                                <li  ng-class="[{active: active, disabled: disabled}, classes]" class="title vivo-tab-button uib-tab nav-item ng-scope ng-isolate-scope" heading="Ofertas" ng-click="phone.timeoutAutoMode('plan'); phone.hideWearable()" style="">
+                                    <a href="index.html" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Ofertas</a>
+                                </li>
+                                <li  ng-class="[{active: active, disabled: disabled}, classes]" class="title vivo-tab-button uib-tab nav-item ng-scope ng-isolate-scope" heading="Detalhes" ng-click="phone.timeoutAutoMode('phone', phone.player.idproduto); phone.hideWearable();">
+                                    <a href="index2.html" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Detalhes</a>
+                                </li>
+                                <li  ng-class="[{active: active, disabled: disabled}, classes]" class="title vivo-tab-button uib-tab nav-item ng-scope ng-isolate-scope active" ng-if="phone.hasWearable" heading="Acessório" ng-click="phone.timeoutAutoMode('wearable', phone.player.acessorios[0].idproduto); phone.showWearable()" style="">
+                                    <a href="index3.html" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Acessórios</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane ng-scope active" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab" style="">
+
+                                    <div class="jumbotron panel-body table_container vivo-wearable ng-scope">
+                                        <table class="table vivo-tabela-plano no-landscape">
+                                            <tbody>
+                                                <tr ng-if="phone.player.acessorios[0].descricao" class="ng-scope">
+                                                    <td colspan="2">
+                                                        <div class="accessory-features">
+                                                            <div scrollable="" on-scroll="phone.timeoutAutoMode()" class="ng-isolate-scope" style="height: 100%; overflow-y: scroll;">
+                                                                <p class="title ng-binding" ng-bind-html="phone.player.acessorios[0].descricao | html">• Veludo interno para proteger a traseira do aparelho <br>• Criada para o Samsung Galaxy A01 <br>• Confortável <br>• Não precisa tirar para carregar o celular</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ng-binding">À Vista</td>
+                                                    <td class="title ng-binding">$50,00</td>
+                                                </tr>
+                                                <tr ng-show="phone.player.acessorios[0].numero_parcelas > 1" class="">
+                                                    <td class="ng-binding">2X <small><strong class="ng-binding">sem juros no cartão de crédito</strong></small></td>
+                                                    <td class="ng-binding">$25,00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table vivo-tabela-plano no-portrait">
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="2" class="table-title">
+                                                        <div class="accessory-features">
+                                                            <div scrollable="" on-scroll="phone.timeoutAutoMode()" class="ng-isolate-scope" style="height: 100%; overflow-y: scroll;">
+                                                                <p class="title ng-binding" ng-bind-html="phone.player.acessorios[0].descricao | html">• Veludo interno para proteger a traseira do aparelho
+                                                                    • Criada para o Samsung Galaxy A01
+                                                                    • Confortável
+                                                                • Não precisa tirar para carregar o celular</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="ng-binding">À Vista</td>
+                                                    <td class="title ng-binding">$50,00</td>
+                                                </tr>
+                                                <tr ng-show="phone.player.acessorios[0].numero_parcelas > 1" class="">
+                                                    <td class="ng-binding">2X <small><strong class="ng-binding">sem juros no cartão de crédito</strong></small></td>
+                                                    <td class="ng-binding">$25,00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="legal ng-binding">* Veja a compatibilidade com o seu dispositivo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img id="tag" class="vivo-tag img-responsive ng-scope"  src="img/tim/banner3.jpg">
+                </div>
+                <div class="video-wallpaper ng-scope" ng-click="phone.toggleVideo()">
+                    <div class="vsc-controller vsc-nosource"></div>
+                    <video class="video-banner" fullscren="" playsinline="" preload="none" autoplay="" muted="" id="videoWallPaper">
+                        Your browser does not support the video tag.
+
+                    </video>
+                </div>
+            </ui-view>
+        </div>
+    </div>
+</body>
+</html>
+
