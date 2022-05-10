@@ -47,8 +47,6 @@ body {
     justify-content: space-between;
 }
 
-
-
 .top-bar .logo {
 	margin-left: 10px;
 	margin-right: 10px;
@@ -89,16 +87,16 @@ body {
 
 .nav-pills > li > a{
 	padding: 10px 0;
-	border-radius: 1.3rem;
+	border-radius: 0.7rem;
 }
 
 .compressed .nav-pills  > li > a {
 	font-size: 0.9em;
-	padding: 12px 0;
+	padding: 12px 0 50px 0;
 }
 
 .compressed .nav-pills  > li + li {
-	margin-left: 15px;
+	margin-left: 7px;
 }
 
 /* Carousel */

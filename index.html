@@ -60,21 +60,21 @@
                                                 <div class="text-center" ng-transclude="">
                                                     <div ng-if="plan.idtipo_plano != phone.OFERTA_SEM_PLANO" class="jumbotron panel-body table_container ng-scope">
                                                         <h3 class="title vivo-titulo-plano vivo-titulo-plano ng-binding">
-                                                            Plano Demo pos
+                                                            Plano Demo Pós
                                                         </h3>
                                                         <table class="table vivo-tabela-plano">
                                                             <tbody>
                                                                 <tr>
                                                                     <td ng-if="plan.tipo_plano == 'Pós' || plan.tipo_plano == 'pos'" class="ng-binding ng-scope">Pós Pago</td>
-                                                                    <td ng-if="plan.preco_no_plano" class="title ng-binding ng-scope">$3.000,00</td>
+                                                                    <td ng-if="plan.preco_no_plano" class="title ng-binding ng-scope"><span class="price-comp">R$</span>3.000<span class="price-comp">,00</span></td>
                                                                 </tr>
                                                                 <tr ng-show="plan.preco_no_plano > 0 &amp;&amp; plan.numero_parcelas" class="">
-                                                                    <td><strong class="ng-binding">1x sem juros no cartão de crédito</strong></td>
-                                                                    <td class="ng-binding">$3.000,00</td>
+                                                                    <td class="ng-binding"><span class="plan-comp"><strong>1x</strong> sem juros</span><br> no cartão de crédito</td>
+                                                                    <td class="ng-binding"><span class="price-comp">R$</span>3.000<span class="price-comp">,00</span></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="ng-binding">Taxa mensal total do plano</td>
-                                                                    <td class="ng-binding">$0,00</td>
+                                                                    <td class="ng-binding plan-small">Taxa mensal total do plano</td>
+                                                                    <td class="ng-binding"><span class="price-comp">R$</span>0<span class="price-comp">,00</span></td>
                                                                 </tr>
                                                                 <tr ng-show="phone.planosPrePago" class="ng-hide">
                                                                     <td class="ng-binding">Pré Pago* - À Vista</td>

@@ -1,8 +1,8 @@
 /* COLORS */
 :root {
-    --primary-color: #002198;
+    --primary-color: #013755;
     --secondary-color: #0026d9;
-    --highlight-color: #ff2da8;
+    --highlight-color: #c20103;
 }
 
 .text-shadow {
@@ -15,8 +15,8 @@
 
 /* Top bar */
 .top-bar {
-	border-bottom: 1px solid rgba(255,255,255,0.190);
-	/*background-image: url('../img/logo.png');
+	/*border-bottom: 1px solid rgba(255,255,255,0.190);
+	background-image: url('../img/logo.png');
 	background-size: 24%;
 	background-position: left 47%;
 	background-repeat: no-repeat; */
@@ -28,10 +28,10 @@
 }
 
 .phone-title {
-	font-size: 28px;
+	font-size: 26px;
     line-height: 40px;
     font-weight: 300;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.5px;
     font-feature-settings: "liga" off;
     color : white;
 	/* padding-top: 23px; */
@@ -58,20 +58,21 @@
 
 
 .nav-pills > li > a{
-	border: 1px solid #fff;
-    color: #fff;
-	background-color: var(--primary-color);
+	border: none;
+    color: var(--primary-color);
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: #3bb5e5;
 	font-size: 0.875rem;
-    border-radius: 1.3rem;
+    border-radius: 20px;
 }
 .nav-pills > li > a:hover{
     background-color: var(--secondary-color);
 }
 
 .nav-pills > li.active > a {
-	
-	background-color: #fff;
-	color: var(--secondary-color);
+	background-color: #9e0b0f;
+	color: #ffffff;
 }
 
 .nav-pills > li.active > a:hover,
@@ -89,25 +90,26 @@
 
 .panel-body > h3 {
 	margin: 0 0 15px;
-	text-align: left;
-	font-size: 21px;
+    text-align: center;
+    font-size: 19px;
     line-height: 24px;
     font-feature-settings: "salt" on;
     margin-bottom: 20px;
-    font-weight: 400;
-    color:  #000;
+    font-weight: 800;
+    color: #004a97;
+    text-transform: uppercase;
 }
 
 .table td {
-	font-size: medium;
-	font-weight: 400;
-	vertical-align: middle !important;
-	padding: 8px 15px !important;
-	text-align: left;
-	letter-spacing: 0rem;
-	line-height: 27px;
+	font-size: 19px;
+    font-weight: 400;
+    vertical-align: middle !important;
+    padding: 8px 15px !important;
+    text-align: left;
+    letter-spacing: 0rem;
+    line-height: 20px !important;
     font-feature-settings: "salt" on,"liga" off;
-    color:  #000;
+    color: #004a97;
     border: none !important;
 }
 
@@ -116,9 +118,34 @@
 }
 .table td:last-child {
 	color: var(--highlight-color);
-	text-align: right;
-	font-size: 16px;
-	padding-right:  0px !important;
+    text-align: right;
+    font-size: 23px;
+    font-weight: 800;
+    padding-right: 0px !important;
+}
+
+span.plan-comp{
+	color: #c20204;
+	font-weight: 800;
+	font-size: 21px;
+}
+
+span.plan-comp strong{
+	font-size: 30px;
+}
+
+.plan-small{
+	font-size: 14px !important;
+}
+
+span.price-comp{
+	font-size: 12px;
+    margin-right: 2px;
+    vertical-align: text-top;
+}
+
+.table{
+	margin-bottom: 45px !important;
 }
 
 .larger-text {
@@ -130,16 +157,17 @@
 }
 
 .jumbotron {
-	background-color: #fff !important;
+	background-color: #bfb6af !important;
 	position: relative;
 	overflow: hidden;
-    padding: 2rem 2rem 0.75rem !important;
-    border-radius: 1.5rem !important;
+    padding: 2.5rem 2rem 4rem !important;
+    border-radius: 3rem !important;
 }
 
 .legal {
-	font-size: smaller !important;
-	text-align: justify;
+	font-size: 10px !important;
+	text-align: left;
+	color: #004a97;
 }
 
 /* Carousel */
@@ -219,7 +247,7 @@
     font-weight: 400;
     vertical-align: middle !important;
     line-height: 32px;
-    color: #000;
+    color: #004a97;
     border: none !important;
     text-rendering: geometricPrecision;
     white-space: pre-wrap;
@@ -237,26 +265,23 @@
 
 .accessory-features p {
 	margin: 0 0 15px;
-	text-align: left;
-	font-size: 21px;
+    text-align: left;
+    font-size: 21px;
     line-height: 24px;
     font-feature-settings: "salt" on;
     margin-bottom: 20px;
     font-weight: 400;
-    color:  #000;
+    color: #004a97;
     white-space: pre-wrap;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .vivo-wearable tr:nth-child(2) > td {
-	font-size: 1.8em;
-
 	padding-top: 20px !important;
 	padding-bottom: 20px !important;
 }
 
 .vivo-wearable tr:nth-child(3) > td {
-	font-size: 1.2em;
 	padding-top: 20px !important;
 	padding-bottom: 20px !important;
 }
@@ -321,6 +346,7 @@ title.img {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	margin-top: -50px;
 }
 
 .tab-pane {
